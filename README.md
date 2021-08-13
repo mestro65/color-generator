@@ -1,3 +1,3 @@
 # color-generator
-Simple Color Generator that generates colors using HEX and RGB codes with color chooser.
+Simple Color Generator that generates colors using HEX, RGB and HSL codes with color chooser.
 
