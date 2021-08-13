@@ -1,3 +1,21 @@
+:root {
+    --mount-meadow: #1bbc9c;
+    --white-smoke: #f0f0f0;
+    --night-rider: #343434;
+    --black: #191b17;
+    --transition: all 0.5s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -44,4 +62,32 @@ code {
 
 .label-class {
     font-family: 'Open Sans', sans-serif;
+}
+
+.color-code {
+    display: flex;
+    margin: auto;
+}
+
+.hero-btns {
+    padding-left: 1rem;
+}
+
+.btn-white {
+    outline: 0;
+    border: 2.5px solid #191b17;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    background: var(--white-smoke);
+    color: var(--night-rider);
+    transition: var(--transition);
+    cursor: pointer;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.btn-white:hover {
+    background: transparent;
+    color: var(--white-smoke);
 }
