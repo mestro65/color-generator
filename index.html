@@ -9,15 +9,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
 </head>
 <body>
 
-<h1>Color Chooser</h1>
+<h1>Color Generator</h1>
 <label for="colorChooser" class="label-class">Choose a Color</label>
 <input type="color" value="#000" id="colorChooser">
 
+<div class="color-code">
 <b>Current color code:-<code id="colorCode"></code> </b>
+<div class="hero-btns">
+    <button type="button" id="btn-copy" class="btn btn-white" onclick="copyToClipboard('#colorCode'); copied();" value="Copy">Copy</button>
+</div>
+</div>
+
 <script src="js/main.js"></script>
+<script>
+    function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+    }
+</script>
+
 </body>
 
 </html>
